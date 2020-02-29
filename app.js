@@ -1,7 +1,7 @@
 function __init__() {
     var dropdown = d3.select("#selDataset");
  
-    d3.json("../samples.json").then((data)=> {
+    d3.json("samples.json").then((data)=> {
         console.log(data)
 
         data.names.forEach(function(name) {
@@ -18,7 +18,7 @@ function __init__() {
 
 
 function buildPlot(id){
-    d3.json("../samples.json").then(function(data){
+    d3.json("samples.json").then(function(data){
         console.log(data);
 
         var dropdownMenu = d3.select("#selDataset");
@@ -96,8 +96,8 @@ function buildPlot(id){
 };
 
 function optionChanged(id) {
-    buildPlot(id);
-}
+     buildPlot(id);
+};
 
 
 __init__();
